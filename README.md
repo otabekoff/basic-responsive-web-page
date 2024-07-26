@@ -41,17 +41,13 @@ This landing page features a modern dark mode design with a focus on blue tones.
 1. **Clone the Repository**
     
     ```bash
-    bashCopy code
     git clone https://github.com/yourusername/modern-dark-mode-landing-page.git
-    
     ```
     
 2. **Navigate to the Project Directory**
     
     ```bash
-    bashCopy code
     cd modern-dark-mode-landing-page
-    
     ```
     
 3. **Open `index.html` in a Browser**
