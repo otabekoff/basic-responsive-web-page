@@ -6,13 +6,13 @@ Welcome to the Modern Dark Mode Landing Page project. This is a stylish and mode
 
 ## Table of Contents
 
-- [Project Overview](notion://www.notion.so/5-dars-Sanoq-sistemalari-ustida-amallar-3b33c2c0cc4948c2b224dcd345eb52ed#project-overview)
-- [Features](notion://www.notion.so/5-dars-Sanoq-sistemalari-ustida-amallar-3b33c2c0cc4948c2b224dcd345eb52ed#features)
-- [Technologies Used](notion://www.notion.so/5-dars-Sanoq-sistemalari-ustida-amallar-3b33c2c0cc4948c2b224dcd345eb52ed#technologies-used)
-- [Setup Instructions](notion://www.notion.so/5-dars-Sanoq-sistemalari-ustida-amallar-3b33c2c0cc4948c2b224dcd345eb52ed#setup-instructions)
-- [Usage](notion://www.notion.so/5-dars-Sanoq-sistemalari-ustida-amallar-3b33c2c0cc4948c2b224dcd345eb52ed#usage)
-- [Contributing](notion://www.notion.so/5-dars-Sanoq-sistemalari-ustida-amallar-3b33c2c0cc4948c2b224dcd345eb52ed#contributing)
-- [License](notion://www.notion.so/5-dars-Sanoq-sistemalari-ustida-amallar-3b33c2c0cc4948c2b224dcd345eb52ed#license)
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup Instructions](#setup-instructions)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Project Overview
 
@@ -39,7 +39,7 @@ This landing page features a modern dark mode design with a focus on blue tones.
 ## Setup Instructions
 
 1. **Clone the Repository**
-    
+
     ```bash
     git clone https://github.com/yourusername/modern-dark-mode-landing-page.git
     ```
