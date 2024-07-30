@@ -12,6 +12,11 @@ body {
     line-height: 1.6;
 }
 
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Container */
 .container {
     width: 90%;
@@ -62,17 +67,48 @@ nav ul li a:hover {
 }
 
 /* Additional styles for the navigation menu */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+header {
+    background: #010213;
+    color: #e0e0e0;
+    border-bottom: 2px solid #007bff;
+    padding: 1rem 0;
+    position: fixed;
+    /* Fix the header to the top */
+    width: 100%;
+    /* Full width */
+    top: 0;
+    /* Align to the top */
+    left: 0;
+    /* Align to the left */
+    z-index: 1000;
+    /* High z-index to ensure it stays above other content */
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Adjust the main content padding to account for the fixed header */
+main {
+    padding-top: 80px;
+    /* Adjust this value based on the height of your header */
+}
+
+/* Ensure content is not hidden behind the fixed header */
+section {
+    scroll-margin-top: 80px;
+    /* Adjust this value based on the height of your header */
+}
+
+/* Hamburger Menu */
 .menu-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    z-index: 1020;
+    /* Ensure the hamburger icon is visible above other elements */
 }
 
 .menu-toggle .bar {
@@ -83,28 +119,23 @@ nav {
     transition: 0.4s;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 1.5rem;
-}
-
-.nav-links a {
-    color: #e0e0e0;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
+/* Active Link Style */
+.nav-links a.active,
+nav ul li a.active {
     color: #007bff;
+    /* Blue Accent or your preferred color */
+    font-weight: bold;
+    /* Optional: Make the active link stand out more */
 }
+
 
 /* Mobile styles */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        /* Ensure the hamburger menu is visible on mobile */
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -116,7 +147,17 @@ nav {
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 10;
+        z-index: 1000;
+        /* Ensure the menu links are above the backdrop */
+        transition: opacity 0.3s ease;
+        opacity: 0;
+        /* Initially hidden */
+    }
+
+    .nav-links.show {
+        display: flex;
+        opacity: 1;
+        /* Make the menu links visible */
     }
 
     .nav-links li {
@@ -126,14 +167,28 @@ nav {
     .nav-links a {
         font-size: 1.5rem;
         /* Increased font size */
+        color: #e0e0e0;
+        /* Ensure text color is visible */
+        transition: color 0.3s;
     }
 
-    .nav-links.show {
-        display: flex;
+    .nav-links a:hover {
+        color: #007bff;
+        /* Blue Accent on hover */
     }
 
-    .menu-toggle {
-        display: flex;
+    .nav-links.show::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 900;
+        /* Ensure the backdrop is behind the menu links */
+        pointer-events: none;
+        /* Make the backdrop not intercept clicks */
     }
 }
 
