@@ -124,7 +124,8 @@ nav {
     }
 
     .nav-links a {
-        font-size: 1.5rem; /* Increased font size */
+        font-size: 1.5rem;
+        /* Increased font size */
     }
 
     .nav-links.show {
@@ -327,7 +328,7 @@ nav {
     background-size: cover;
     object-fit: cover;
     border-radius: 8px;
-    opacity:0.7;
+    opacity: 0.7;
 }
 
 /* Contact Section */
